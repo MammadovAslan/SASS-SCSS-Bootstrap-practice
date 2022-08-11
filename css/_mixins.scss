@@ -1,0 +1,16 @@
+@import "variables";
+
+@mixin underline($width) {
+  display: inline-block;
+  position: relative;
+  font-weight: 800;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    right: 0px;
+    background-color: $primaryColor;
+    height: 3px;
+    width: $width;
+  }
+}

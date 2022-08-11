@@ -1,0 +1,34 @@
+@import "mixins";
+@import "variables";
+
+.navbar {
+  font-weight: 700;
+  border-radius: 25px;
+  box-shadow: 0 4px 5px -2px;
+  a,
+  button {
+    padding: 12px;
+    padding: 12px 30px;
+  }
+  li {
+    margin-left: 40px;
+    position: relative;
+    &:hover:not(:last-child) {
+      &::before {
+        content: "";
+        height: 3px;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        background-color: $primaryColor;
+      }
+    }
+  }
+  .logo {
+    padding: 10px 32px;
+  }
+  .navbar-toggler {
+    border: 0px;
+    overflow: 0px;
+  }
+}
